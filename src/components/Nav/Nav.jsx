@@ -6,8 +6,8 @@ function Nav() {
   return (
     <div>
         <Link href="/home">Home</Link>
-        <Link href="/jewelry">Jewelry</Link>
-        <Link href="/books">Books</Link>
+        <Link href="/products/jewelry">Jewelry</Link>
+        <Link href="/products/books">Books</Link>
     </div>
   )
 }

@@ -5,5 +5,5 @@ export const fakeStoreHttp = axios.create({
 });
 
 export const apiHttp = axios.create({
-    baseURL: '/api',  // Adjust this depending on your API path
+    baseURL: '/api/products',  // Adjust this depending on your API path
 });
