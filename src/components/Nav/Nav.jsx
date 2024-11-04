@@ -9,6 +9,8 @@ function Nav() {
         <Link href="/">Home</Link>
         <Link href="/products/jewelry">Jewelry</Link>
         <Link href="/products/books">Books</Link>
+        <Link href="/zustand/buttons">Zustand buttons</Link>
+        <Link href="/zustand/view">Zustand view</Link>
     </div>
   )
 }
