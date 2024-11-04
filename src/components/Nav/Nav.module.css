@@ -1,0 +1,8 @@
+.navBar{
+    background-color: #eadeee;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 8rem;
+    font-family: 'Courier New', Courier, monospace;
+}
