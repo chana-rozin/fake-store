@@ -1,7 +1,14 @@
 import { NextResponse } from 'next/server'; // Make sure to import this
+import {getAllDocuments, getConnectDatabase} from '@/services/mongo.ts'
+
 
 export async function GET() {
-    return NextResponse.json(GBooks);
+    const connectDatabase = await getConnectDatabase();
+    const res = await getAllDocuments(connectDatabase, "GBooks");
+    console.log('GET books', res)
+    return NextResponse.json(res);
+    // return NextResponse.json(GBooks);
+
 }
 const GBooks = [
     {
@@ -75,3 +82,4 @@ const GBooks = [
         image: "https://covers.openlibrary.org/b/id/8231990-L.jpg"
     }
 ];
+
