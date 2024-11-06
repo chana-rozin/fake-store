@@ -5,8 +5,10 @@ let client: MongoClient;
 let clientPromise: Promise<MongoClient>;16
 
 export async function connectDatabase() {
+    console.log("trying to connect");
     if (!clientPromise) {
         const dbConnectionString = process.env.DB_CONNECTION;
+        console.log("dbConnectionString", dbConnectionString);
         if (!dbConnectionString) 
             throw new Error('Database connection string is not defined');
         
