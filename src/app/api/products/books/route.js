@@ -3,18 +3,18 @@ import {getAllDocuments, connectDatabase, insertDocument} from '@/services/mongo
 
 
 export async function GET() {
-    const res = await getAllDocuments("GBooks");
-    console.log('GET books', res)
-    return NextResponse.json(res);
+    // const res = await getAllDocuments("GBooks");
+    // console.log('GET books', res)
+    // return NextResponse.json(res);
+    return  NextResponse.json(GBooks);
 }
 
 export async function POST(req) {
-    // const newBook = await req.json();
-    // console.log('POST body', newBook)
-    // const res = await insertDocument("GBooks", newBook);
-    // console.log('POST book', res)
-    // return NextResponse.json(res);
-    return  NextResponse.json(GBooks);
+    const newBook = await req.json();
+    console.log('POST body', newBook)
+    const res = await insertDocument("GBooks", newBook);
+    console.log('POST book', res)
+    return NextResponse.json(res);
 }
 
 
