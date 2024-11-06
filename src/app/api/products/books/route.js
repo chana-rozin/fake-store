@@ -6,7 +6,6 @@ export async function GET() {
     const res = await getAllDocuments("GBooks");
     console.log('GET books', res)
     return NextResponse.json(res);
-    // return  NextResponse.json(GBooks);
 }
 
 export async function POST(req) {
