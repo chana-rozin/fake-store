@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { getJewelry, getBooks } from '../../../services/fetchData.js';
+import { getJewelry, getBooks } from '../../../services/productService.js';
 import Product from '../../../components/Product/Product.jsx';
 import style from './style.module.css';
 

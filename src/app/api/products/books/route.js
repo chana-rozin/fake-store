@@ -1,15 +1,23 @@
 import { NextResponse } from 'next/server'; // Make sure to import this
-import {getAllDocuments, getConnectDatabase} from '@/services/mongo.ts'
+import {getAllDocuments, connectDatabase, insertDocument} from '@/services/mongo.ts'
 
 
 export async function GET() {
-    const connectDatabase = await getConnectDatabase();
-    const res = await getAllDocuments(connectDatabase, "GBooks");
+    const res = await getAllDocuments("GBooks");
     console.log('GET books', res)
     return NextResponse.json(res);
-    // return NextResponse.json(GBooks);
-
 }
+
+export async function POST(req) {
+    const newBook = await req.json();
+    console.log('POST body', newBook)
+    const res = await insertDocument("GBooks", newBook);
+    console.log('POST book', res)
+    return NextResponse.json(res);
+}
+
+
+
 const GBooks = [
     {
         id: 1,
