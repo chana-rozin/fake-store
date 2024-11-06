@@ -9,11 +9,12 @@ export async function GET() {
 }
 
 export async function POST(req) {
-    const newBook = await req.json();
-    console.log('POST body', newBook)
-    const res = await insertDocument("GBooks", newBook);
-    console.log('POST book', res)
-    return NextResponse.json(res);
+    // const newBook = await req.json();
+    // console.log('POST body', newBook)
+    // const res = await insertDocument("GBooks", newBook);
+    // console.log('POST book', res)
+    // return NextResponse.json(res);
+    return  NextResponse.json(GBooks);
 }
 
 
