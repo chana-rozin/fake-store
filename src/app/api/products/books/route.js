@@ -3,10 +3,10 @@ import {getAllDocuments, connectDatabase, insertDocument} from '@/services/mongo
 
 
 export async function GET() {
-    // const res = await getAllDocuments("GBooks");
-    // console.log('GET books', res)
-    // return NextResponse.json(res);
-    return  NextResponse.json(GBooks);
+    const res = await getAllDocuments("GBooks");
+    console.log('GET books', res)
+    return NextResponse.json(res);
+    // return  NextResponse.json(GBooks);
 }
 
 export async function POST(req) {
